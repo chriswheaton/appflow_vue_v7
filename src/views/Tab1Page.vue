@@ -8,10 +8,10 @@
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Build 2</ion-title>
+          <ion-title size="large">Appflow</ion-title>
         </ion-toolbar>
       </ion-header>
-      <h1>Build #2</h1>
+      <h1>Build 3/20/24 #1</h1>
       <ExploreContainer name="Tab 1 page" />
     </ion-content>
   </ion-page>
