@@ -26,12 +26,14 @@ const initializeApp = async () => {
   // Register event to fire each time user resumes the app
 
   App.addListener("resume", async () => {
-    if (localStorage.shouldReloadApp === "true") {
-      await LiveUpdates.reload();
-    } else {
-      const result = await LiveUpdates.sync();
-      localStorage.shouldReloadApp = result.activeApplicationPathChanged;
-    }
+    const result = await LiveUpdates.sync();
+    console.log("LiveUpdates.sync", result);
+    // if (localStorage.shouldReloadApp === "true") {
+    //   await LiveUpdates.reload();
+    // } else {
+
+    //   localStorage.shouldReloadApp = result.activeApplicationPathChanged;
+    // }
   });
 
   // First sync on app load
