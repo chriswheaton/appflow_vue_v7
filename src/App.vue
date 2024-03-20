@@ -28,6 +28,9 @@ const initializeApp = async () => {
   App.addListener("resume", async () => {
     const result = await LiveUpdates.sync();
     console.log("LiveUpdates.sync", result);
+    console.log("-----------------------");
+    const config = await LiveUpdates.getConfig();
+    console.log("LiveUpdates.getConfig", config);
     // if (localStorage.shouldReloadApp === "true") {
     //   await LiveUpdates.reload();
     // } else {
